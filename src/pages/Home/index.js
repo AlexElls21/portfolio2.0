@@ -11,9 +11,7 @@ const GridContainer = styled.div`
   height: 100vh;
   width: 100vw;
 
-  ${({ theme: { space } }) => css`
-    padding: ${space.large};
-  `}
+  ${({ theme: { space } }) => css``}
 `;
 
 const Home = () => {
