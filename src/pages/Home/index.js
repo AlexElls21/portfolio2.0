@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
+import Prismic from "prismic-javascript";
+
+import usePrismic from "../../utils/usePrismic";
 
 const GridContainer = styled.div`
   display: grid;
@@ -14,6 +17,10 @@ const GridContainer = styled.div`
 `;
 
 const Home = () => {
+  const { loading } = usePrismic(Prismic.Predicates.at("document.type", "project"));
+
+  if (loading) return <div>LOADING....</div>;
+
   return (
     <GridContainer canAccess>
       <div>hi</div>
