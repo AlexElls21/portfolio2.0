@@ -2,17 +2,22 @@ import { createGlobalStyle } from "styled-components";
 
 import space from "./space";
 import colors from "./colors";
+import type from "./type";
 
 export default {
   space,
-  colors
+  colors,
+  type
 };
 
 export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
  /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -41,6 +46,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 ol, ul {
 	list-style: none;
