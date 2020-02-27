@@ -6,6 +6,7 @@ import {
   NavLink
 } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -38,10 +39,16 @@ const LinkContainer = styled.div`
 const ProfileContainer = styled.div`
   background: black;
   color: white;
+  font-size: 25px;
+`;
+
+const Hero = styled.div`
+  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 100px;
+  height: 100vh;
 `;
 
 const Links = styled(NavLink)`
@@ -56,14 +63,25 @@ const App = () => (
     <Router>
       <GlobalStyle />
       <ProfileContainer>
-        <div
-          style={{
-            background: "white",
-            borderRadius: "100%",
-            height: "500px",
-            width: "500px"
-          }}
-        ></div>
+        <div>Alex Ellsworth</div>
+        <Hero>
+          <motion.div
+            style={{
+              background: "white",
+              borderRadius: "100%",
+              height: "500px",
+              width: "500px",
+              boxShadow: "0px 0px 25px white"
+            }}
+            // animate={{ scale: 2 }}
+            // transition={{ duration: 0.5 }}
+            animate={{
+              scale: [1, 1.5, 1.5, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "50%"]
+            }}
+          />
+        </Hero>
       </ProfileContainer>
       <div>
         <LinkContainer>

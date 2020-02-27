@@ -26,21 +26,27 @@ const InfoSection = styled.div`
 
 const InfoBox = styled.div`
   background: #ea0f36;
-  height: 300px;
+  height: 100%;
   width: 200px;
   display: flex;
   flex-direction: column;
   padding: 20px;
   color: white;
+  box-shadow: 0px 20px 20px #adadad;
 
   .Title {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 900;
   }
 
   .Role {
     font-size: 23px;
     font-weight: 900;
+    margin-bottom: 30px;
+  }
+
+  .Text {
+    line-height: 1.4;
   }
 `;
 
@@ -49,43 +55,31 @@ export default () => {
     <About>
       <Header>About me</Header>
       <InfoSection>
-        <InfoBox>
+        <InfoBox id="1">
           <div className="Title">Democracy</div>
           <div className="Role">Web Developer</div>
-          <p>
+          <p className="Text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with
+            ever since the 1500s,
           </p>
         </InfoBox>
-        <InfoBox>
+        <InfoBox id="2">
           <div className="Title">Democracy</div>
           <div className="Role">Web Developer</div>
-          <p>
+          <p className="Text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with
+            ever since the 1500s,
           </p>
         </InfoBox>
-        <InfoBox>
+        <InfoBox id="3">
           <div className="Title">Democracy</div>
           <div className="Role">Web Developer</div>
-          <p>
+          <p className="Text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with
+            ever since the 1500s,
           </p>
         </InfoBox>
       </InfoSection>
