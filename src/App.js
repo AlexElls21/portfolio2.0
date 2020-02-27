@@ -13,6 +13,8 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import { GlobalStyle } from "./theme";
 
+import HeroImage from "./images/HeroImage.jpg";
+
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 55% 45%;
@@ -37,9 +39,13 @@ const LinkContainer = styled.div`
 `;
 
 const ProfileContainer = styled.div`
-  background: black;
   color: white;
+  background: black;
   font-size: 25px;
+  background-image: url(${HeroImage});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const Hero = styled.div`
@@ -63,24 +69,30 @@ const App = () => (
     <Router>
       <GlobalStyle />
       <ProfileContainer>
-        <div>Alex Ellsworth</div>
+        <div style={{ position: "fixed" }}>Alex Ellsworth</div>
         <Hero>
           <motion.div
             style={{
-              background: "white",
-              borderRadius: "100%",
               height: "500px",
               width: "500px",
-              boxShadow: "0px 0px 25px white"
+              // boxShadow: "0px 0px 25px white",
+              display: "flex"
             }}
-            // animate={{ scale: 2 }}
-            // transition={{ duration: 0.5 }}
-            animate={{
-              scale: [1, 1.5, 1.5, 1, 1],
-              rotate: [0, 0, 270, 270, 0],
-              borderRadius: ["20%", "20%", "50%", "50%", "50%"]
-            }}
-          />
+          >
+            <div
+              style={{
+                alignSelf: "flex-end",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                width: "100%",
+                fontSize: "25px"
+              }}
+            >
+              <div style={{ marginBottom: "20px" }}>Hey!! This is ALEX,</div>
+              <div>I am a Web Developer based in Provo, UT</div>
+            </div>
+          </motion.div>
         </Hero>
       </ProfileContainer>
       <div>
