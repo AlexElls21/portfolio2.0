@@ -1,0 +1,32 @@
+.button {
+  background-color: transparent;
+  border-color: red;
+  color: red;
+  height: 40px;
+  width: 40px;
+  border: 1px solid red;
+  font-size: 18px;
+  outline: none;
+}
+
+.button:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0px 10px 10px #adadad;
+}
+
+.carousel__dot-group button {
+  background: white;
+  border: 1px solid red;
+  margin: 2px;
+  height: 10px;
+  width: 10px;
+}
+
+.carousel__dot-group button:disabled {
+  background: red;
+  border: 1px solid red;
+  margin: 2px;
+  height: 10px;
+  width: 10px;
+}

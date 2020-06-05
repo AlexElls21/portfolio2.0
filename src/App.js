@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  NavLink
+  NavLink,
 } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -76,7 +76,7 @@ const App = () => (
               height: "500px",
               width: "500px",
               // boxShadow: "0px 0px 25px white",
-              display: "flex"
+              display: "flex",
             }}
           >
             <div
@@ -86,10 +86,10 @@ const App = () => (
                 flexDirection: "column",
                 alignItems: "center",
                 width: "100%",
-                fontSize: "25px"
+                fontSize: "25px",
               }}
             >
-              <div style={{ marginBottom: "20px" }}>Hey!! This is ALEX,</div>
+              <div style={{ marginBottom: "20px" }}>Hey! This is ALEX,</div>
               <div>I am a Web Developer based in Provo, UT</div>
             </div>
           </motion.div>
@@ -98,7 +98,7 @@ const App = () => (
       <div>
         <LinkContainer>
           <Links to="/about" activeClassName="active">
-            About
+            About me
           </Links>
           <Links to="/projects" activeClassName="active">
             Projects

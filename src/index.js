@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 
 import App from "./App";
